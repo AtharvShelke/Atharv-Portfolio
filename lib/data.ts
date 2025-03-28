@@ -77,14 +77,14 @@ export const projectsData = [
     tags: ["React", "Next.js", "Tailwind", "Framer-Motion"],
     imageUrl: restaura,
   },
-  
+
   {
     title: "Training & Placement Portal",
     description:
       "Worked as a Full Stack Developer to streamline the portal for managing student placements, integrating an intuitive UI with a robust database connection using MongoDB and Prisma.",
     tags: ["Next.js", "MongoDB", "Prisma", "Tailwind"],
     imageUrl: jobPortalImg,
-  },{
+  }, {
     title: "CaseCobra (E-commerce Store)",
     description:
       "Developed a full-stack e-commerce platform from end to end for a case store, ensuring a seamless shopping experience with modern web technologies.",
@@ -98,7 +98,7 @@ export const projectsData = [
     tags: ["Next.js", "Prisma", "MongoDB", "Tailwind"],
     imageUrl: inventoryManagementImg,
   },
-  
+
 ] as const;
 
 
@@ -115,9 +115,6 @@ export const skillsData = [
   "Tailwind",
   "Prisma",
   "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
   "Express",
   "PostgreSQL",
   "Python",
