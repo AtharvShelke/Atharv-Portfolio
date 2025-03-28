@@ -5,10 +5,15 @@ import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
 import { HiDownload } from 'react-icons/hi';
-
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/active-section-context";
+import { useEffect } from 'react';
+import { useSectionInView } from '@/lib/hooks';
 const Intro = () => {
+   
+    const {ref} = useSectionInView("Home", 0.3);
     return (
-        <section className="flex flex-col items-center justify-center text-center py-8 w-[60%]">
+        <section ref={ref} className="flex flex-col items-center justify-center text-center py-8 w-[60%] scroll-mt-[100rem]" id='home'>
             {/* Profile Picture with Animation */}
             <div className="relative">
                 <motion.div
@@ -40,7 +45,7 @@ const Intro = () => {
 
             {/* Introductory Text */}
             <motion.h1
-                className="mt-14 px-6 sm:text-3xl font-bold leading-snug sm:leading-[1.4] "
+                className="mt-14 px-6 sm:text-2xl font-bold leading-snug sm:leading-[1.4] "
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
