@@ -5,7 +5,8 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
-
+import restaura from "@/public/restaura.png";
+import enrich from "@/public/enrich.png";
 export const links = [
   {
     name: "Home",
@@ -62,23 +63,23 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Enrich Kitchen (Multi-Page Frontend Website)",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Developed a sleek, multi-page frontend with smooth animations using Next.js, Tailwind, and Framer Motion.",
+    tags: ["React", "Next.js", "Tailwind", "Framer-Motion"],
+    imageUrl: enrich,
   },
   {
-    title: "rmtDev",
+    title: "Restaura (Single-Page Frontend Website",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Built a fast, responsive single-page site with fluid UI animations using Next.js, Tailwind, and Framer Motion.",
+    tags: ["React", "Next.js", "Tailwind", "Framer-Motion"],
+    imageUrl: restaura,
   },
   {
     title: "Word Analytics",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+      "A public web app for quick analytics on text. It shows word count, character count, and social media post limits.",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
     imageUrl: wordanalyticsImg,
   },
