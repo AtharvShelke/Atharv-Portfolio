@@ -1,13 +1,15 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+
+
+import { MdOutlineSchool } from "react-icons/md";
+import { BsFillBriefcaseFill } from "react-icons/bs";
+import { FaReact,FaLaptopCode } from "react-icons/fa";
 import jobPortalImg from "@/public/job-portal.png";
 import inventoryManagementImg from "@/public/inventory-management.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 import caseCobraImg from "@/public/e-commerce.png";
 import restaura from "@/public/restaura.png";
 import enrich from "@/public/enrich.png";
+import { RiRobot2Line } from "react-icons/ri";
 export const links = [
   {
     name: "Home",
@@ -35,32 +37,50 @@ export const links = [
   },
 ] as const;
 
+
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Bachelor's in Computer Science Engineering",
+    location: "MGM University",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+      "Currently pursuing a degree in Computer Science Engineering. Gained hands-on experience in web development and currently exploring AI/ML.",
+    icon: React.createElement(MdOutlineSchool),
+    date: "2022 - 2026",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "College Web Development Project",
+    location: "MGM University",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "Developed a Training and Placement Portal to assist students and recruiters in the hiring process. Worked with modern web technologies to build a seamless experience.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    date: "2023 - Present",
+  },
+  {
+    title: "Freelance Full-Stack Developer",
+    location: "Remote",
+    description:
+      "Created an Inventory Management Portal for an interior design company, allowing them to efficiently track stock and manage resources. Built using React, Node.js, and PostgreSQL.",
+    icon: React.createElement(BsFillBriefcaseFill),
+    date: "2024",
+  },
+  {
+    title: "Developer - CaseCobra",
+    location: "Personal Project",
+    description:
+      "Built an eCommerce platform for a custom phone case company. Integrated a custom design tool, enabling users to create their own cases. Tech stack: Next.js, Tailwind, Stripe for payments.",
+    icon: React.createElement(FaLaptopCode),
+    date: "2024",
+  },
+  {
+    title: "Aspiring AI/ML Enthusiast",
+    location: "Self-Learning",
+    description:
+      "Currently diving into AI/ML, focusing on Python, TensorFlow, and machine learning fundamentals while continuing to work as a full-stack developer.",
+    icon: React.createElement(RiRobot2Line),
+    date: "2025 - Present",
   },
 ] as const;
+
 
 export const projectsData = [
   {

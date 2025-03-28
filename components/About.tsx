@@ -27,13 +27,13 @@ const About = () => {
                 to master DSA. In web development, I’m most comfortable with
                 <span className="font-medium"> Next.js and the MERN stack</span>.
                 <span className="italic"> My favorite part of programming</span> is solving complex problems and
-                optimizing solutions. I am currently looking for an <span className="font-medium">internship</span>
+                optimizing solutions. I am currently looking for an <span className="font-medium">internship </span>
                 as a Full Stack Web Developer and also opportunities to deepen my knowledge in AI/ML.
             </p>
 
             <p>
                 <span className="italic">When I'm not coding</span>, you'll probably find me immersed in
-                <span className="font-medium">gaming</span>. Whether it's exploring new virtual worlds or
+                <span className="font-medium"> gaming</span>. Whether it's exploring new virtual worlds or
                 competing online, I enjoy the thrill and challenge of gaming just as much as coding.
             </p>
         </motion.section>
