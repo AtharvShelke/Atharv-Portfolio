@@ -44,7 +44,7 @@ const Intro = () => {
 
       {/* Introductory Text */}
       <motion.h1
-        className="mt-14 px-6 sm:text-2xl font-normal leading-snug sm:leading-[1.4]"
+        className="mt-14 px-6 text-lg sm:text-2xl font-normal leading-snug sm:leading-[1.4]"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
