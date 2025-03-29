@@ -5,9 +5,7 @@ import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
 import { HiDownload } from 'react-icons/hi';
-import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { useEffect } from 'react';
 import { useSectionInView } from '@/lib/hooks';
 const Intro = () => {
 
