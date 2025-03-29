@@ -16,7 +16,7 @@ const Header = () => {
         animate={{ y: 0, opacity: 1 }}
       >
         <nav className="w-full">
-          <ul className="flex items-center justify-between flex-nowrap text-[0.9rem] font-medium text-gray-500">
+          <ul className="flex items-center justify-between flex-nowrap text-xs sm:text-[0.9rem] font-medium text-gray-500">
             {links.map((link, i) => (
               <motion.li key={i}
                 className="h-full flex items-center justify-center relative"
@@ -25,7 +25,7 @@ const Header = () => {
               >
                 <Link 
                   className={clsx(
-                    'flex min-w-[60px] items-center justify-center px-2 py-2 rounded-full transition hover:text-gray-950 relative',
+                    'flex sm:min-w-[60px] items-center justify-center px-1 sm:px-2 py-2 rounded-full transition hover:text-gray-950 relative ',
                     { "text-gray-950": activeSection === link.name }
                   )} 
                   href={link.hash}

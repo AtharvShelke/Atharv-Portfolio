@@ -5,7 +5,7 @@ import { useSectionInView } from "@/lib/hooks";
 
 const About = () => {
     
-    const { ref } = useSectionInView("About");
+    const { ref } = useSectionInView("About", 0.5);
     return (
         <motion.section
             ref={ref}  // Ensure ref is correctly assigned
