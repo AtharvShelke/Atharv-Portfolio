@@ -87,14 +87,14 @@ export const projectsData = [
     title: "Enrich Kitchen (Multi-Page Frontend Website)",
     description:
       "Developed a sleek, multi-page frontend with smooth animations using Next.js, Tailwind, and Framer Motion.",
-    tags: ["React", "Next.js", "Tailwind", "Framer-Motion"],
+    tags: ["React", "Next.js", "Tailwind", "Framer-Motion", "JavaScript"],
     imageUrl: enrich,
   },
   {
     title: "Restaura (Single-Page Frontend Website)",
     description:
       "Built a fast, responsive single-page site with fluid UI animations using Next.js, Tailwind, and Framer Motion.",
-    tags: ["React", "Next.js", "Tailwind", "Framer-Motion"],
+    tags: ["React", "Next.js", "Tailwind", "Framer-Motion", "JavaScript"],
     imageUrl: restaura,
   },
 
@@ -102,20 +102,20 @@ export const projectsData = [
     title: "Training & Placement Portal",
     description:
       "Worked as a Full Stack Developer to streamline the portal for managing student placements, integrating an intuitive UI with a robust database connection using MongoDB and Prisma.",
-    tags: ["Next.js", "MongoDB", "Prisma", "Tailwind"],
+    tags: ["Next.js", "MongoDB", "Prisma", "Tailwind", "JavaScript"],
     imageUrl: jobPortalImg,
   }, {
     title: "CaseCobra (E-commerce Store)",
     description:
       "Developed a full-stack e-commerce platform from end to end for a case store, ensuring a seamless shopping experience with modern web technologies.",
-    tags: ["Next.js", "MongoDB", "Prisma", "Tailwind"],
+    tags: ["Next.js", "MongoDB", "Prisma", "Tailwind", "TypeScript"],
     imageUrl: caseCobraImg,
   },
   {
     title: "Inventory Management Portal",
     description:
       "Built a robust inventory management system for real-time tracking, optimizing stock management with Next.js, Prisma, MongoDB, and a clean Tailwind UI.",
-    tags: ["Next.js", "Prisma", "MongoDB", "Tailwind"],
+    tags: ["Next.js", "Prisma", "MongoDB", "Tailwind", "JavaScript"],
     imageUrl: inventoryManagementImg,
   },
 
