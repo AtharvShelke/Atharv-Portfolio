@@ -16,7 +16,7 @@ const Header = () => {
         animate={{ y: 0, opacity: 1 }}
       >
         <nav className="w-full">
-          <ul className="flex items-center justify-center flex-nowrap gap-2 text-[0.9rem] font-medium text-gray-500">
+          <ul className="flex items-center justify-between flex-nowrap text-[0.9rem] font-medium text-gray-500">
             {links.map((link, i) => (
               <motion.li key={i}
                 className="h-full flex items-center justify-center relative"

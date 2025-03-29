@@ -89,6 +89,7 @@ export const projectsData = [
       "Developed a sleek, multi-page frontend with smooth animations using Next.js, Tailwind, and Framer Motion.",
     tags: ["React", "Next.js", "Tailwind", "Framer-Motion", "JavaScript"],
     imageUrl: enrich,
+    link: "https://enrich-kitchen-studio.vercel.app/",
   },
   {
     title: "Restaura (Single-Page Frontend Website)",
@@ -96,29 +97,32 @@ export const projectsData = [
       "Built a fast, responsive single-page site with fluid UI animations using Next.js, Tailwind, and Framer Motion.",
     tags: ["React", "Next.js", "Tailwind", "Framer-Motion", "JavaScript"],
     imageUrl: restaura,
+    link: "https://restaura-sigma.vercel.app/",
   },
-
   {
     title: "Training & Placement Portal",
     description:
-      "Worked as a Full Stack Developer to streamline the portal for managing student placements, integrating an intuitive UI with a robust database connection using MongoDB and Prisma.",
+      "Worked as a Full Stack Developer to streamline the portal for managing student placements.",
     tags: ["Next.js", "MongoDB", "Prisma", "Tailwind", "JavaScript"],
     imageUrl: jobPortalImg,
-  }, {
+    link: undefined, // ✅ Add link as undefined
+  },
+  {
     title: "CaseCobra (E-commerce Store)",
     description:
-      "Developed a full-stack e-commerce platform from end to end for a case store, ensuring a seamless shopping experience with modern web technologies.",
+      "Developed a full-stack e-commerce platform from end to end.",
     tags: ["Next.js", "MongoDB", "Prisma", "Tailwind", "TypeScript"],
     imageUrl: caseCobraImg,
+    link: "https://casecobra-atharv.vercel.app/",
   },
   {
     title: "Inventory Management Portal",
     description:
-      "Built a robust inventory management system for real-time tracking, optimizing stock management with Next.js, Prisma, MongoDB, and a clean Tailwind UI.",
+      "Built a robust inventory management system for real-time tracking.",
     tags: ["Next.js", "Prisma", "MongoDB", "Tailwind", "JavaScript"],
     imageUrl: inventoryManagementImg,
+    link: undefined, // ✅ Add link as undefined
   },
-
 ] as const;
 
 

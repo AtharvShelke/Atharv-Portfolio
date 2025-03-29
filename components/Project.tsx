@@ -4,10 +4,11 @@ import { useRef, useMemo } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { BiLink } from "react-icons/bi";
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Project({ title, description, tags, imageUrl }: ProjectProps) {
+export default function Project({ title, description, tags, imageUrl, link}: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   
   // Optimize scroll effects
@@ -36,6 +37,7 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
             <h3 className="text-2xl font-semibold">{title}</h3>
           </header>
           <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
+          {link?(<a href={link} className="mt-1 leading-relaxed flex items-center gap-1"><BiLink/>{link}</a>):('')}
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li key={index} className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full">
