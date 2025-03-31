@@ -12,7 +12,7 @@ const Intro = () => {
   const { ref } = useSectionInView("Home", 0.3);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
-    <section ref={ref} className="flex flex-col items-center justify-center text-center py-8 w-[60%] scroll-mt-[100rem]" id='home'>
+    <section ref={ref} className="flex flex-col items-center justify-center text-center py-8 w-[80%] sm:w-[60%] scroll-mt-[100rem]" id='home'>
       {/* Profile Picture with Animation */}
       <div className="relative">
         <motion.div
@@ -44,7 +44,7 @@ const Intro = () => {
 
       {/* Introductory Text */}
       <motion.h1
-        className="mt-14 px-6 text-lg sm:text-2xl font-normal leading-snug sm:leading-[1.4]"
+        className="mt-14 px-4 text-lg sm:text-2xl font-normal leading-snug sm:leading-[1.4]"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -65,7 +65,7 @@ const Intro = () => {
         className='flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium mt-8'>
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none   hover:bg-gray-950  transition"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -76,7 +76,7 @@ const Intro = () => {
         </Link>
 
         <a
-          className="border border-black/50 group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className="border border-black/50 group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none    transition cursor-pointer "
           href="/Atharv_Shelke_Resume.pdf"
           download
         >
@@ -85,7 +85,7 @@ const Intro = () => {
         </a>
 
         <a
-          className="border border-black/50 bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 "
+          className="border border-black/50 bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full    transition cursor-pointer borderBlack "
           href="https://www.linkedin.com/in/atharv-shelke/"
           target="_blank"
         >
@@ -93,7 +93,7 @@ const Intro = () => {
         </a>
 
         <a
-          className="border border-black/50 bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 "
+          className="border border-black/50 bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full   hover:text-gray-950  transition cursor-pointer borderBlack  "
           href="https://github.com/AtharvShelke"
           target="_blank"
         >

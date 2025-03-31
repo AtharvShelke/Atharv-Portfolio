@@ -16,9 +16,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Atharv | Portfolio",
-  description: "Hi I am Atharv and this is my Portfolio",
+  title: "Atharv Shelke - Full Stack Developer & Portfolio",
+  description: "Explore the portfolio of Atharv Shelke, a full-stack web developer specializing in React, Next.js, and backend development. Discover projects, skills, and contact details.",
+  keywords: "Atharv Shelke, Full Stack Developer, Web Developer, Next.js, React, Portfolio",
+  authors: [{ name: "Atharv Shelke" }],
+  creator: "Atharv Shelke",
+  publisher: "Atharv Shelke",
+  openGraph: {
+    title: "Atharv Shelke - Full Stack Developer",
+    description: "Check out the portfolio of Atharv Shelke, showcasing web development projects and expertise.",
+    url: "https://atharv-portfolio-ivory.vercel.app",
+    siteName: "Atharv Shelke Portfolio",
+    type: "website",
+  },
+  
 };
+
 
 export default function RootLayout({
   children,
