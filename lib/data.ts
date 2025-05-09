@@ -9,6 +9,7 @@ import inventoryManagementImg from "@/public/inventory-management.png";
 import caseCobraImg from "@/public/e-commerce.png";
 import restaura from "@/public/restaura.png";
 import enrich from "@/public/enrich.png";
+import aiFitness from "@/public/ai-fitness-app.png";
 import { RiRobot2Line } from "react-icons/ri";
 export const links = [
   {
@@ -84,6 +85,14 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Ai Fitness App",
+    description:
+      "Developed a sleek Ai App with Next.js, Tailwind, and Google Genrative AI",
+    tags: ["React", "Next.js", "Tailwind", "Google Genrative AI", "JavaScript"],
+    imageUrl: aiFitness,
+    link: "https://ai-fitness-nextjs-zeta.vercel.app/",
+  },
+  {
     title: "Enrich Kitchen (Multi-Page Frontend Website)",
     description:
       "Developed a sleek, multi-page frontend with smooth animations using Next.js, Tailwind, and Framer Motion.",
@@ -105,7 +114,7 @@ export const projectsData = [
       "Worked as a Full Stack Developer to streamline the portal for managing student placements.",
     tags: ["Next.js", "MongoDB", "Prisma", "Tailwind", "JavaScript"],
     imageUrl: jobPortalImg,
-    link: undefined, // ✅ Add link as undefined
+    link: undefined, 
   },
   {
     title: "CaseCobra (E-commerce Store)",
@@ -121,7 +130,7 @@ export const projectsData = [
       "Built a robust inventory management system for real-time tracking.",
     tags: ["Next.js", "Prisma", "MongoDB", "Tailwind", "JavaScript"],
     imageUrl: inventoryManagementImg,
-    link: undefined, // ✅ Add link as undefined
+    link: undefined, 
   },
 ] as const;
 
