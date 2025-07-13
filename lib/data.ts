@@ -10,7 +10,9 @@ import caseCobraImg from "@/public/e-commerce.png";
 import restaura from "@/public/restaura.png";
 import enrich from "@/public/enrich.png";
 import aiFitness from "@/public/ai-fitness-app.png";
+import movieSeach from "@/public/movie-search-app.png";
 import { RiRobot2Line } from "react-icons/ri";
+
 export const links = [
   {
     name: "Home",
@@ -101,6 +103,13 @@ export const projectsData = [
     link: "https://enrich-kitchen-studio.vercel.app/",
   },
   {
+    title:"Movie-Seach-App",
+    description:"A responsive Movie Search App built with ReactJS that allows users to search for movies, view details, and discover trending films. The app fetches data from The Movie Database (TMDb) API and provides a clean, user-friendly interface.",
+    tags: ["React", "JavaScript", "CSS", "API", "AppWrite"],
+    imageUrl: movieSeach,
+    link: "https://movie-search-app-vert-five.vercel.app/",
+  },
+  {
     title: "Restaura (Single-Page Frontend Website)",
     description:
       "Built a fast, responsive single-page site with fluid UI animations using Next.js, Tailwind, and Framer Motion.",
@@ -131,7 +140,8 @@ export const projectsData = [
     tags: ["Next.js", "Prisma", "MongoDB", "Tailwind", "JavaScript"],
     imageUrl: inventoryManagementImg,
     link: undefined, 
-  },
+  }
+  
 ] as const;
 
 
