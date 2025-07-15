@@ -100,7 +100,7 @@ export const projectsData = [
       "Developed a sleek, multi-page frontend with smooth animations using Next.js, Tailwind, and Framer Motion.",
     tags: ["React", "Next.js", "Tailwind", "Framer-Motion", "JavaScript"],
     imageUrl: enrich,
-    link: "https://enrich-kitchen-studio.vercel.app/",
+    link: "https://www.enrichfurniture.com",
   },
   {
     title:"Movie-Seach-App",
