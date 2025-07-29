@@ -1,37 +1,36 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/Footer";
+import ThemeProvider from "@/context/theme-context";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Atharv Shelke - Full Stack Developer & Portfolio",
-  description: "Explore the portfolio of Atharv Shelke, a full-stack web developer specializing in React, Next.js, and backend development. Discover projects, skills, and contact details.",
-  keywords: "Atharv Shelke, Full Stack Developer, Web Developer, Next.js, React, Portfolio",
+  title: "Atharv Shelke - Full Stack Developer",
+  description: "Innovative full-stack developer specializing in modern web technologies. Explore my projects, skills, and let's build something amazing together.",
+  keywords: "Atharv Shelke, Full Stack Developer, React, Next.js, TypeScript, AI/ML",
   authors: [{ name: "Atharv Shelke" }],
   creator: "Atharv Shelke",
   publisher: "Atharv Shelke",
   openGraph: {
     title: "Atharv Shelke - Full Stack Developer",
-    description: "Check out the portfolio of Atharv Shelke, showcasing web development projects and expertise.",
+    description: "Innovative solutions through code. Check out my latest projects and expertise.",
     url: "https://atharv-portfolio-ivory.vercel.app",
     siteName: "Atharv Shelke Portfolio",
     type: "website",
   },
-  
 };
-
 
 export default function RootLayout({
   children,
@@ -41,17 +40,24 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-gray-50 antialiased text-gray-950 relative pt-28 sm:pt-36`}
+        className={`${inter.variable} ${jetbrainsMono.variable} bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 antialiased text-slate-900 dark:text-slate-100 relative transition-colors duration-300`}
       >
-      <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] "></div>
-        <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] "></div>
-   
-        
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-          <Footer />
-        </ActiveSectionContextProvider>
+        {/* Enhanced Background Elements */}
+        <div className="fixed inset-0 -z-10 overflow-hidden">
+          <div className="absolute top-0 -left-4 w-72 h-72 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute top-0 -right-4 w-72 h-72 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-gradient-to-r from-pink-400 to-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <ThemeProvider>
+          <ActiveSectionContextProvider>
+            <Header />
+            <main className="pt-16 sm:pt-20">
+              {children}
+            </main>
+            <Footer />
+          </ActiveSectionContextProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

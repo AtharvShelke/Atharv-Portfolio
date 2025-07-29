@@ -7,99 +7,126 @@ import { FaGithubSquare } from 'react-icons/fa';
 import { HiDownload } from 'react-icons/hi';
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useSectionInView } from '@/lib/hooks';
-const Intro = () => {
 
+const Intro = () => {
   const { ref } = useSectionInView("Home", 0.3);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
   return (
-    <section ref={ref} className="flex flex-col items-center justify-center text-center py-8 w-[80%] sm:w-[60%] scroll-mt-[100rem]" id='home'>
-      {/* Profile Picture with Animation */}
-      <div className="relative">
+    <section
+      ref={ref}
+      className="min-h-screen flex flex-col items-center justify-center text-center px-4 scroll-mt-28"
+      id='home'
+    >
+      {/* Hero Content */}
+      <div className="max-w-4xl mx-auto">
+
+        {/* Profile Picture with Enhanced Animation */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          className="relative mb-8 inline-block"
+          initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: 'spring', stiffness: 120, damping: 12 }}
         >
-          <Image
-            src="/ghost_pfp.jpg"
-            alt="Atharv's Profile Picture"
-            width={192}
-            height={192}
-            quality={100}
-            priority
-            className="rounded-full border-[6px] border-white object-cover shadow-xl hover:shadow-2xl transition-shadow duration-300"
-          />
+          <div className="relative w-44 h-44 sm:w-52 sm:h-52 mx-auto">
+            {/* Background blur effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-lg opacity-30 animate-pulse scale-110"></div>
+
+            {/* Profile Image */}
+            <Image
+              src="/my-profile.jpg"
+              alt="Atharv's Profile Picture"
+              width={208}
+              height={208}
+              quality={100}
+              priority
+              className="relative w-full h-full rounded-full border-4 border-white dark:border-slate-800 object-cover shadow-2xl"
+            />
+
+            {/* Waving Hand Emoji */}
+            <motion.span
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ type: 'spring', stiffness: 140, delay: 0.5 }}
+              className="absolute -bottom-2 -right-2 text-4xl sm:text-5xl bg-white dark:bg-slate-800 rounded-full p-2 shadow-lg border-2 border-slate-200 dark:border-slate-700"
+            >
+              👋
+            </motion.span>
+          </div>
         </motion.div>
 
-        {/* Waving Hand Emoji */}
-        <motion.span
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ type: 'spring', stiffness: 140, delay: 0.5 }}
-          className="absolute -bottom-2 -right-2 text-5xl drop-shadow-md"
+
+
+        {/* Enhanced Typography */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mb-8"
         >
-          👋
-        </motion.span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
+            Hi, I'm <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Atharv</span>
+          </h1>
+
+          <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl mx-auto">
+            A passionate <span className="font-semibold text-blue-600 dark:text-blue-400">Full-Stack Developer</span> crafting
+            exceptional digital experiences with modern technologies.
+          </p>
+
+          <p className="text-lg text-slate-500 dark:text-slate-400 mt-4">
+            Specializing in <span className="font-medium">React</span>, <span className="font-medium">Next.js</span>, and <span className="font-medium">AI/ML</span>
+          </p>
+        </motion.div>
+
+        {/* Enhanced Action Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <Link
+            href="#contact"
+            className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 flex items-center gap-3 rounded-2xl font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+            onClick={() => {
+              setActiveSection("Contact");
+              setTimeOfLastClick(Date.now());
+            }}
+          >
+            Let&apos;s Connect
+            <BsArrowRight className="group-hover:translate-x-1 transition-transform" />
+          </Link>
+
+          <a
+            className="group bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 px-8 py-4 flex items-center gap-3 rounded-2xl font-medium hover:border-blue-500 dark:hover:border-blue-400 hover:scale-105 transition-all duration-300"
+            href="/Atharv_Shelke_Resume.pdf"
+            download
+          >
+            Download Resume
+            <HiDownload className="group-hover:translate-y-1 transition-transform" />
+          </a>
+
+          <div className="flex gap-4">
+            <a
+              className="group bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 p-4 rounded-2xl hover:border-blue-500 dark:hover:border-blue-400 hover:scale-110 transition-all duration-300"
+              href="https://www.linkedin.com/in/atharv-shelke/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsLinkedin className="text-xl text-blue-600" />
+            </a>
+
+            <a
+              className="group bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 p-4 rounded-2xl hover:border-blue-500 dark:hover:border-blue-400 hover:scale-110 transition-all duration-300"
+              href="https://github.com/AtharvShelke"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithubSquare className="text-xl text-slate-700 dark:text-slate-300" />
+            </a>
+          </div>
+        </motion.div>
       </div>
-
-      {/* Introductory Text */}
-      <motion.h1
-        className="mt-14 px-4 text-lg sm:text-2xl font-normal leading-snug sm:leading-[1.4]"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        Hey there, I'm <span className="font-bold">Atharv</span>. <br className="sm:hidden" />
-        A passionate <span className="font-bold">Full-Stack Developer</span> crafting engaging
-        <span className="font-bold"> web & mobile experiences</span>.
-        <br />
-        Focused on <span className="font-bold">React (Next.js)</span> & modern tech.
-      </motion.h1>
-
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-        className='flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium mt-8'>
-        <Link
-          href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none   hover:bg-gray-950  transition"
-          onClick={() => {
-            setActiveSection("Contact");
-            setTimeOfLastClick(Date.now());
-          }}
-        >
-          Contact me here{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Link>
-
-        <a
-          className="border border-black/50 group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none    transition cursor-pointer "
-          href="/Atharv_Shelke_Resume.pdf"
-          download
-        >
-          Download Resume{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-        </a>
-
-        <a
-          className="border border-black/50 bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full    transition cursor-pointer borderBlack "
-          href="https://www.linkedin.com/in/atharv-shelke/"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
-
-        <a
-          className="border border-black/50 bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full   hover:text-gray-950  transition cursor-pointer borderBlack  "
-          href="https://github.com/AtharvShelke"
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </a>
-      </motion.div>
     </section>
   );
 };

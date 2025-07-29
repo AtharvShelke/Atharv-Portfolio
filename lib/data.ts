@@ -46,103 +46,123 @@ export const experiencesData = [
     title: "Bachelor's in Computer Science Engineering",
     location: "MGM University",
     description:
-      "Currently pursuing a degree in Computer Science Engineering. Gained hands-on experience in web development and currently exploring AI/ML.",
+      "Currently pursuing a degree in Computer Science Engineering with a focus on modern software development practices. Building strong foundations in algorithms, data structures, and full-stack development while maintaining excellent academic performance.",
     icon: React.createElement(MdOutlineSchool),
     date: "2022 - 2026",
+    skills: ["Data Structures", "Algorithms", "Database Management", "Software Engineering", "Computer Networks"]
   },
   {
-    title: "College Web Development Project",
-    location: "MGM University",
+    title: "AI/ML Research & Development",
+    location: "Self-Learning & Practice",
     description:
-      "Developed a Training and Placement Portal to assist students and recruiters in the hiring process. Worked with modern web technologies to build a seamless experience.",
-    icon: React.createElement(FaReact),
-    date: "2023 - Present",
+      "Actively exploring the frontiers of artificial intelligence and machine learning. Working with Python frameworks, building predictive models, and understanding deep learning concepts while applying them to real-world problems.",
+    icon: React.createElement(RiRobot2Line),
+    date: "2024 - Present",
+    skills: ["Python", "TensorFlow", "Machine Learning", "Data Analysis", "Neural Networks", "Pandas"]
+  },
+  {
+    title: "Full-Stack Developer - CaseCobra",
+    location: "Personal Project",
+    description:
+      "Architected and developed a comprehensive eCommerce platform featuring a custom design tool for phone cases. Implemented secure payment processing, user authentication, and responsive design with modern web technologies.",
+    icon: React.createElement(FaLaptopCode),
+    date: "2024",
+    skills: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe API", "Database Design", "Authentication"]
   },
   {
     title: "Freelance Full-Stack Developer",
     location: "Remote",
     description:
-      "Created an Inventory Management Portal for an interior design company, allowing them to efficiently track stock and manage resources. Built using React, Node.js, and PostgreSQL.",
+      "Delivered a complete inventory management solution for an interior design company, streamlining their resource tracking and operational efficiency. Collaborated directly with stakeholders to understand requirements and deliver a scalable solution.",
     icon: React.createElement(BsFillBriefcaseFill),
     date: "2024",
+    skills: ["React", "Node.js", "PostgreSQL", "API Development", "Project Management", "Client Relations"]
   },
   {
-    title: "Developer - CaseCobra",
-    location: "Personal Project",
+    title: "College Web Development Lead",
+    location: "MGM University",
     description:
-      "Built an eCommerce platform for a custom phone case company. Integrated a custom design tool, enabling users to create their own cases. Tech stack: Next.js, Tailwind, Stripe for payments.",
-    icon: React.createElement(FaLaptopCode),
-    date: "2024",
-  },
-  {
-    title: "Aspiring AI/ML Enthusiast",
-    location: "Self-Learning",
-    description:
-      "Currently diving into AI/ML, focusing on Python, TensorFlow, and machine learning fundamentals while continuing to work as a full-stack developer.",
-    icon: React.createElement(RiRobot2Line),
-    date: "2025 - Present",
+      "Led the development of a comprehensive Training and Placement Portal, facilitating seamless interaction between students, recruiters, and administration. Managed a team of developers and implemented agile development practices.",
+    icon: React.createElement(FaReact),
+    date: "2023 - 2024",
+    skills: ["Team Leadership", "React", "MongoDB", "Prisma", "Project Planning", "System Architecture"]
   },
 ] as const;
 
 
 export const projectsData = [
   {
-    title: "Ai Fitness App",
+    title: "AI Fitness App",
     description:
-      "Developed a sleek Ai App with Next.js, Tailwind, and Google Genrative AI",
-    tags: ["React", "Next.js", "Tailwind", "Google Genrative AI", "JavaScript"],
+      "An intelligent fitness application that leverages Google Generative AI to provide personalized workout recommendations, track progress, and offer real-time fitness guidance with a sleek, modern interface.",
+    tags: ["React", "Next.js", "Tailwind CSS", "Google Generative AI", "JavaScript"],
     imageUrl: aiFitness,
     link: "https://ai-fitness-nextjs-zeta.vercel.app/",
+    github: "https://github.com/AtharvShelke/ai-fitness-app", // Add your actual GitHub URL
+    date: "2024",
   },
   {
-    title: "Enrich Kitchen (Multi-Page Frontend Website)",
+    title: "Enrich Kitchen",
     description:
-      "Developed a sleek, multi-page frontend with smooth animations using Next.js, Tailwind, and Framer Motion.",
-    tags: ["React", "Next.js", "Tailwind", "Framer-Motion", "JavaScript"],
+      "A sophisticated multi-page furniture website featuring smooth animations, elegant design, and seamless user experience. Built for Enrich Furniture to showcase their premium kitchen and furniture collections.",
+    tags: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "JavaScript"],
     imageUrl: enrich,
     link: "https://www.enrichfurniture.com",
+    github: "https://github.com/AtharvShelke/enrich-kitchen", // Add your actual GitHub URL
+    date: "2024",
   },
   {
-    title:"Movie-Seach-App",
-    description:"A responsive Movie Search App built with ReactJS that allows users to search for movies, view details, and discover trending films. The app fetches data from The Movie Database (TMDb) API and provides a clean, user-friendly interface.",
-    tags: ["React", "JavaScript", "CSS", "API", "AppWrite"],
+    title: "Movie Search App",
+    description:
+      "A responsive movie discovery platform that allows users to search for movies, view detailed information, and explore trending films. Features real-time search with clean UI and smooth navigation.",
+    tags: ["React", "JavaScript", "CSS", "TMDb API", "Appwrite"],
     imageUrl: movieSeach,
     link: "https://movie-search-app-vert-five.vercel.app/",
+    github: "https://github.com/AtharvShelke/movie-search-app", // Add your actual GitHub URL
+    date: "2024",
   },
   {
-    title: "Restaura (Single-Page Frontend Website)",
+    title: "Restaura",
     description:
-      "Built a fast, responsive single-page site with fluid UI animations using Next.js, Tailwind, and Framer Motion.",
-    tags: ["React", "Next.js", "Tailwind", "Framer-Motion", "JavaScript"],
+      "A modern single-page restaurant website featuring fluid animations, elegant design, and responsive layout. Showcases menu items, restaurant ambiance, and provides seamless user experience.",
+    tags: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "JavaScript"],
     imageUrl: restaura,
     link: "https://restaura-sigma.vercel.app/",
+    github: "https://github.com/AtharvShelke/restaura", // Add your actual GitHub URL
+    date: "2024",
   },
   {
     title: "Training & Placement Portal",
     description:
-      "Worked as a Full Stack Developer to streamline the portal for managing student placements.",
-    tags: ["Next.js", "MongoDB", "Prisma", "Tailwind", "JavaScript"],
+      "A comprehensive full-stack portal designed to streamline student placement processes. Features job posting, application tracking, student profiles, and company dashboard for efficient placement management.",
+    tags: ["Next.js", "MongoDB", "Prisma", "Tailwind CSS", "JavaScript"],
     imageUrl: jobPortalImg,
     link: undefined, 
+    github: "https://github.com/AtharvShelke/placement-portal", // Add your actual GitHub URL
+    date: "2024",
   },
   {
-    title: "CaseCobra (E-commerce Store)",
+    title: "CaseCobra E-commerce",
     description:
-      "Developed a full-stack e-commerce platform from end to end.",
-    tags: ["Next.js", "MongoDB", "Prisma", "Tailwind", "TypeScript"],
+      "A full-featured e-commerce platform for custom phone cases. Includes product customization, secure payment processing, order management, and admin dashboard with complete end-to-end functionality.",
+    tags: ["Next.js", "MongoDB", "Prisma", "Tailwind CSS", "TypeScript"],
     imageUrl: caseCobraImg,
     link: "https://casecobra-atharv.vercel.app/",
+    github: "https://github.com/AtharvShelke/casecobra", // Add your actual GitHub URL
+    date: "2024",
   },
   {
-    title: "Inventory Management Portal",
+    title: "Inventory Management System",
     description:
-      "Built a robust inventory management system for real-time tracking.",
-    tags: ["Next.js", "Prisma", "MongoDB", "Tailwind", "JavaScript"],
+      "A robust inventory management portal featuring real-time stock tracking, automated alerts, supplier management, and comprehensive reporting dashboard for efficient warehouse operations.",
+    tags: ["Next.js", "Prisma", "MongoDB", "Tailwind CSS", "JavaScript"],
     imageUrl: inventoryManagementImg,
     link: undefined, 
+    github: "https://github.com/AtharvShelke/inventory-management", // Add your actual GitHub URL
+    date: "2024",
   }
-  
 ] as const;
+
 
 
 

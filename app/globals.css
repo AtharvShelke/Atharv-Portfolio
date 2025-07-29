@@ -1,4 +1,232 @@
 @import "tailwindcss";
 html{
     --line-color:"#e5e7eb";
+    /* Primary Colors */
+    --primary: #2563eb (Blue 600)
+    --primary-dark: #1d4ed8 (Blue 700)
+    --primary-light: #3b82f6 (Blue 500)
+
+    /* Neutral Colors */
+    --neutral-900: #111827
+    --neutral-700: #374151
+    --neutral-500: #6b7280
+    --neutral-200: #e5e7eb
+    --neutral-50: #f9fafb
+
+    /* Accent Colors */
+    --accent: #8b5cf6 (Violet 500)
+    --success: #10b981 (Emerald 500)
+
+}
+
+/* Custom theme configuration for dark mode and colors */
+@theme {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-light: #3b82f6;
+  --color-accent: #8b5cf6;
+  --color-success: #10b981;
+  
+  --font-family-sans: Inter, system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+  
+  --animation-blob: blob 7s infinite;
+  
+  --spacing-128: 32rem;
+  --spacing-144: 36rem;
+  
+  --border-radius-4xl: 2rem;
+}
+
+/* Dark mode variant - works with your theme toggle */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom animations */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Enhanced Timeline Styles */
+.react-vertical-timeline-element-content {
+    position: relative;
+    overflow: visible !important;
+}
+
+.react-vertical-timeline-element-content::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, transparent 0%, rgba(59, 130, 246, 0.1) 50%, transparent 100%);
+    border-radius: 1.5rem;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.react-vertical-timeline-element:hover .react-vertical-timeline-element-content::before {
+    opacity: 1;
+}
+
+/* Dark theme timeline adjustments */
+.dark .react-vertical-timeline-element-date {
+    color: #cbd5e1 !important;
+}
+
+.dark .react-vertical-timeline::before {
+    background: #475569 !important;
+}
+
+/* Experience icon animations */
+.experience-icon {
+    transition: all 0.3s ease;
+}
+
+.react-vertical-timeline-element:hover .experience-icon {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px -3px rgba(59, 130, 246, 0.4) !important;
+}
+
+/* Timeline line gradient effect */
+.react-vertical-timeline::before {
+    background: linear-gradient(to bottom, #e2e8f0 0%, #cbd5e1 50%, #e2e8f0 100%) !important;
+}
+
+.dark .react-vertical-timeline::before {
+    background: linear-gradient(to bottom, #475569 0%, #64748b 50%, #475569 100%) !important;
+}
+/* Mobile-specific timeline adjustments */
+@media (max-width: 640px) {
+  .react-vertical-timeline {
+    width: 100% !important;
+  }
+  
+  .react-vertical-timeline::before {
+    left: 20px !important;
+  }
+  
+  .react-vertical-timeline-element {
+    margin: 1em 0 !important;
+  }
+  
+  .react-vertical-timeline-element-content {
+    margin-left: 60px !important;
+    margin-right: 0 !important;
+  }
+  
+  .react-vertical-timeline-element-date {
+    left: -110px !important;
+    text-align: right !important;
+    min-width: 120px !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .react-vertical-timeline-element-icon {
+    left: 12px !important;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .react-vertical-timeline-element-content {
+    width: 85% !important;
+  }
+  
+  .react-vertical-timeline-element-date {
+    font-size: 0.875rem !important;
+  }
+}
+
+/* Enhanced mobile timeline line */
+@media (max-width: 640px) {
+  .react-vertical-timeline::before {
+    background: linear-gradient(to bottom, 
+      transparent 0%, 
+      #e2e8f0 10%, 
+      #e2e8f0 90%, 
+      transparent 100%) !important;
+    width: 2px !important;
+  }
+  
+  .dark .react-vertical-timeline::before {
+    background: linear-gradient(to bottom, 
+      transparent 0%, 
+      #475569 10%, 
+      #475569 90%, 
+      transparent 100%) !important;
+  }
+}
+
+/* Responsive experience icons */
+.experience-icon {
+  transition: all 0.3s ease !important;
+}
+
+@media (hover: hover) {
+  .react-vertical-timeline-element:hover .experience-icon {
+    transform: scale(1.1);
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+@media (max-width: 640px) {
+  .vertical-timeline-custom {
+    overflow-x: hidden;
+  }
 }
