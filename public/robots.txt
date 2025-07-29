@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /private-page
+
+# Host
+Host: https://atharv-portfolio-ivory.vercel.app
+
+# Sitemaps
+Sitemap: https://atharv-portfolio-ivory.vercel.app/sitemap.xml

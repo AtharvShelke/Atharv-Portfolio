@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://yourdomain.com', // replace with your actual domain
+  siteUrl: 'https://atharv-portfolio-ivory.vercel.app', // replace with your actual domain
   generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: 'daily',

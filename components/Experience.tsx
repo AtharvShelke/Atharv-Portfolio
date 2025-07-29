@@ -3,7 +3,7 @@ import { experiencesData } from "@/lib/data";
 import SectionHeading from "./SectionHeading"
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import 'react-vertical-timeline-component/style.min.css'
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
@@ -11,6 +11,30 @@ import { useTheme } from "@/context/theme-context";
 const Experience = () => {
     const { ref } = useSectionInView("Experience");
     const { theme } = useTheme();
+    const [screenSize, setScreenSize] = useState<'mobile' | 'tablet' | 'desktop'>('desktop');
+
+    // Handle screen size detection
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth;
+            if (width < 640) {
+                setScreenSize('mobile');
+            } else if (width < 1024) {
+                setScreenSize('tablet');
+            } else {
+                setScreenSize('desktop');
+            }
+        };
+
+        // Set initial size
+        handleResize();
+
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -22,13 +46,12 @@ const Experience = () => {
         },
     };
 
-    // Responsive animation variants
+    // Responsive animation variants using state instead of window
     const getItemVariants = (index: number) => ({
         hidden: { 
             opacity: 0, 
-            // Only alternate on larger screens, center animation on mobile
-            x: window.innerWidth >= 768 ? (index % 2 === 0 ? -50 : 50) : 0,
-            y: window.innerWidth < 768 ? 50 : 0
+            x: screenSize === 'desktop' ? (index % 2 === 0 ? -50 : 50) : 0,
+            y: screenSize === 'mobile' ? 50 : 0
         },
         visible: {
             opacity: 1,
@@ -39,6 +62,46 @@ const Experience = () => {
                 ease: "easeOut",
             },
         },
+    });
+
+    // Responsive styles based on state
+    const getContentStyle = () => ({
+        background: theme === 'dark' 
+            ? 'linear-gradient(135deg, #1e293b 0%, #334155 100%)' 
+            : 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
+        boxShadow: theme === 'dark'
+            ? '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+            : '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+        border: theme === 'dark' 
+            ? '1px solid rgba(148, 163, 184, 0.2)' 
+            : '1px solid rgba(148, 163, 184, 0.1)',
+        textAlign: "left" as const,
+        padding: screenSize === 'mobile' ? "1.25rem 1.5rem" : 
+                screenSize === 'tablet' ? "1.5rem 2rem" : "2rem 2.5rem",
+        borderRadius: screenSize === 'mobile' ? "1rem" : "1.5rem",
+        position: "relative" as const,
+        overflow: "hidden" as const,
+        margin: screenSize === 'mobile' ? "0 0 1rem 0" : undefined,
+        width: screenSize === 'mobile' ? "calc(100% - 40px)" : undefined
+    });
+
+    const getIconStyle = () => ({
+        background: theme === 'dark'
+            ? 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)'
+            : 'linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%)',
+        color: 'white',
+        fontSize: screenSize === 'mobile' ? "1.25rem" : "1.5rem",
+        width: screenSize === 'mobile' ? "40px" : "60px",
+        height: screenSize === 'mobile' ? "40px" : "60px",
+        boxShadow: theme === 'dark'
+            ? '0 4px 15px -3px rgba(59, 130, 246, 0.3)'
+            : '0 4px 15px -3px rgba(96, 165, 250, 0.3)',
+        border: theme === 'dark' 
+            ? `${screenSize === 'mobile' ? '2px' : '3px'} solid #1e293b` 
+            : `${screenSize === 'mobile' ? '2px' : '3px'} solid white`,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
     });
 
     return (
@@ -72,32 +135,10 @@ const Experience = () => {
                                 variants={getItemVariants(index)}
                             >
                                 <VerticalTimelineElement
-                                    // Only alternate position on larger screens
-                                    position={window.innerWidth >= 1024 ? (index % 2 === 0 ? "left" : "right") : undefined}
-                                    contentStyle={{
-                                        background: theme === 'dark' 
-                                            ? 'linear-gradient(135deg, #1e293b 0%, #334155 100%)' 
-                                            : 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
-                                        boxShadow: theme === 'dark'
-                                            ? '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)' // Reduced shadow on mobile
-                                            : '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-                                        border: theme === 'dark' 
-                                            ? '1px solid rgba(148, 163, 184, 0.2)' 
-                                            : '1px solid rgba(148, 163, 184, 0.1)',
-                                        textAlign: "left",
-                                        // Responsive padding
-                                        padding: window.innerWidth < 640 ? "1.25rem 1.5rem" : 
-                                                window.innerWidth < 1024 ? "1.5rem 2rem" : "2rem 2.5rem",
-                                        borderRadius: window.innerWidth < 640 ? "1rem" : "1.5rem",
-                                        position: "relative",
-                                        overflow: "hidden",
-                                        // Mobile-specific styles
-                                        margin: window.innerWidth < 640 ? "0 0 1rem 0" : undefined,
-                                        width: window.innerWidth < 640 ? "calc(100% - 40px)" : undefined
-                                    }}
+                                    position={screenSize === 'desktop' ? (index % 2 === 0 ? "left" : "right") : undefined}
+                                    contentStyle={getContentStyle()}
                                     contentArrowStyle={{
-                                        // Hide arrows on mobile
-                                        display: window.innerWidth < 640 ? 'none' : 'block',
+                                        display: screenSize === 'mobile' ? 'none' : 'block',
                                         borderRight: index % 2 === 0 
                                             ? (theme === 'dark' ? "0.4rem solid #334155" : "0.4rem solid #f8fafc")
                                             : "none",
@@ -109,29 +150,11 @@ const Experience = () => {
                                     date={exp.date}
                                     dateClassName={`text-slate-600 dark:text-slate-300 font-medium text-xs sm:text-sm lg:text-base ${theme === 'dark' ? 'dark-theme-date' : ''}`}
                                     icon={exp.icon}
-                                    iconStyle={{
-                                        background: theme === 'dark'
-                                            ? 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)'
-                                            : 'linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%)',
-                                        color: 'white',
-                                        // Responsive icon size
-                                        fontSize: window.innerWidth < 640 ? "1.25rem" : "1.5rem",
-                                        width: window.innerWidth < 640 ? "40px" : "60px",
-                                        height: window.innerWidth < 640 ? "40px" : "60px",
-                                        boxShadow: theme === 'dark'
-                                            ? '0 4px 15px -3px rgba(59, 130, 246, 0.3)'
-                                            : '0 4px 15px -3px rgba(96, 165, 250, 0.3)',
-                                        border: theme === 'dark' 
-                                            ? `${window.innerWidth < 640 ? '2px' : '3px'} solid #1e293b` 
-                                            : `${window.innerWidth < 640 ? '2px' : '3px'} solid white`,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center'
-                                    }}
+                                    iconStyle={getIconStyle()}
                                     iconClassName="experience-icon"
                                 >
                                     {/* Background decoration - hide on mobile */}
-                                    {window.innerWidth >= 640 && (
+                                    {screenSize !== 'mobile' && (
                                         <div className={`absolute top-0 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full -translate-y-4 ${
                                             index % 2 === 0 ? 'right-0 translate-x-4' : 'left-0 -translate-x-4'
                                         }`}></div>
