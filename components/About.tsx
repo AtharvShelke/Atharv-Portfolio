@@ -2,7 +2,7 @@
 import SectionHeading from "./SectionHeading";
 import { motion } from 'framer-motion';
 import { useSectionInView } from "@/lib/hooks";
-import { FaCode, FaGraduationCap, FaBrain, FaGamepad, FaRocket, FaHeart, FaLightbulb } from 'react-icons/fa';
+import {  FaBrain, FaGamepad, FaRocket, FaHeart, FaLightbulb } from 'react-icons/fa';
 import { HiAcademicCap, HiCode, HiSparkles } from 'react-icons/hi';
 
 const About = () => {

@@ -25,6 +25,8 @@ const Contact = () => {
             form?.reset();
         } catch (error) {
             setSubmitStatus('error');
+            console.error("Email sending failed:", error);
+
         } finally {
             setIsSubmitting(false);
             // Reset status after 5 seconds
