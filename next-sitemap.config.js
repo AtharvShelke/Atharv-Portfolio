@@ -8,8 +8,8 @@ module.exports = {
   exclude: ['/private-page'],
   robotsTxtOptions: {
     policies: [
-      { userAgent: '*', allow: '/' },
-      { userAgent: '*', disallow: '/private-page' },
+      { userAgent: '*', allow: '/', disallow: ['/private-page'] },
+      { userAgent: 'Googlebot', allow: '/' },
     ],
   },
 };
