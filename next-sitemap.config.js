@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://atharv-portfolio-ivory.vercel.app', // replace with your actual domain
+  siteUrl: 'https://atharv-portfolio-ivory.vercel.app', 
   generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: 'daily',
@@ -8,7 +8,7 @@ module.exports = {
   exclude: ['/private-page'],
   robotsTxtOptions: {
     policies: [
-      { userAgent: '*', allow: '/', disallow: ['/private-page'] },
+      { userAgent: '*', allow: '/' },
       { userAgent: 'Googlebot', allow: '/' },
     ],
   },

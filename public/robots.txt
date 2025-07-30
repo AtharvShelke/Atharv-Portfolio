@@ -1,7 +1,8 @@
 # *
 User-agent: *
 Allow: /
-Disallow: /private-page
+User-agent: Googlebot
+Allow: /
 
 Host: https://atharv-portfolio-ivory.vercel.app
 Sitemap: https://atharv-portfolio-ivory.vercel.app/sitemap.xml
