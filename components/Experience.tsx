@@ -107,7 +107,7 @@ const Experience = () => {
     return (
         <section ref={ref} id='experience' className="scroll-mt-28 mb-16 sm:mb-28 lg:mb-40 px-3 sm:px-4 lg:px-6">
             <div className="max-w-7xl mx-auto">
-                <SectionHeading>Professional Experience</SectionHeading>
+                <h2 className="text-3xl font-medium capitalize mb-8 text-center">Experience</h2>
                 
                 <motion.p 
                     className="text-center text-slate-600 dark:text-slate-300 mb-8 sm:mb-10 lg:mb-12 max-w-xl sm:max-w-2xl mx-auto text-sm sm:text-base lg:text-lg px-4"

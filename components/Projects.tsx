@@ -35,7 +35,7 @@ export default function Projects() {
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28 px-4">
       <div className="max-w-4xl mx-auto"> {/* Reduced from max-w-6xl to max-w-4xl */}
-        <SectionHeading>Featured Projects</SectionHeading>
+        <h2 className="text-3xl font-medium capitalize mb-8 text-center">Featured Projects</h2>
         
         <motion.p 
           className="text-center text-slate-600 dark:text-slate-300 mb-10 max-w-xl mx-auto text-base"

@@ -36,11 +36,11 @@ const Intro = () => {
             <Image
               src="/my-profile.jpg"
               alt="Atharv's Profile Picture"
-              width={208}
-              height={208}
+              width={300}
+              height={300}
               quality={100}
               priority
-              className="relative w-full h-full rounded-full border-4 border-white dark:border-slate-800 object-cover shadow-2xl"
+              className="relative w-full h-full rounded-full border-2 border-white dark:border-slate-800 object-cover shadow-2xl"
             />
 
             {/* Waving Hand Emoji */}
@@ -99,7 +99,7 @@ const Intro = () => {
 
           <a
             className="group bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 px-8 py-4 flex items-center gap-3 rounded-2xl font-medium hover:border-blue-500 dark:hover:border-blue-400 hover:scale-105 transition-all duration-300"
-            href="/Atharv_Shelke_Resume.pdf"
+            href="/new_assets/AtharvShelke_Resume.pdf"
             download
           >
             Download Resume

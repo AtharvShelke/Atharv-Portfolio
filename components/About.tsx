@@ -50,7 +50,7 @@ const About = () => {
             transition={{ delay: 0.175 }}
             id="about"
         >
-            <SectionHeading>About Me</SectionHeading>
+            <h2 className="text-3xl font-medium capitalize mb-8 text-center">About Me</h2>
             
             {/* Personal Introduction */}
             <motion.div 

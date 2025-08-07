@@ -71,7 +71,7 @@ const Contact = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
         >
-            <SectionHeading>Get In Touch</SectionHeading>
+            <h2 className="text-3xl font-medium capitalize mb-8 text-center">Get in Touch</h2>
             
             <motion.p 
                 className="text-center text-slate-600 dark:text-slate-300 mb-16 max-w-2xl mx-auto text-lg"

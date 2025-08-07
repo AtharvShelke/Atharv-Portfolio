@@ -7,10 +7,11 @@ import { FaReact,FaLaptopCode } from "react-icons/fa";
 import jobPortalImg from "@/public/job-portal.png";
 import inventoryManagementImg from "@/public/inventory-management.png";
 import caseCobraImg from "@/public/e-commerce.png";
-import restaura from "@/public/restaura.png";
-import enrich from "@/public/enrich.png";
-import aiFitness from "@/public/ai-fitness-app.png";
-import movieSeach from "@/public/movie-search-app.png";
+import restaura from "@/public/new_assets/restaura-project.png";
+import enrich from "@/public/new_assets/enrich-project.png";
+import aiFitness from "@/public/new_assets/ai-fitness.png";
+import movieSeach from "@/public/new_assets/movie-search.png";
+import aiStoryGenerator from "@/public/new_assets/AI-STORY.png"
 import { RiRobot2Line } from "react-icons/ri";
 
 export const links = [
@@ -92,13 +93,23 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "AI Story Generator",
+    description:
+      "An intelligent fitness application that leverages Google Generative AI to provide personalized workout recommendations, track progress, and offer real-time fitness guidance with a sleek, modern interface.",
+    tags: ["React", "Next.js", "Tailwind CSS", "Google Generative AI", "JavaScript"],
+    imageUrl: aiStoryGenerator,
+    link: "https://ai-story-generator-theta.vercel.app/",
+    github: undefined, 
+    date: "2024",
+  },
+  {
     title: "AI Fitness App",
     description:
       "An intelligent fitness application that leverages Google Generative AI to provide personalized workout recommendations, track progress, and offer real-time fitness guidance with a sleek, modern interface.",
     tags: ["React", "Next.js", "Tailwind CSS", "Google Generative AI", "JavaScript"],
     imageUrl: aiFitness,
     link: "https://ai-fitness-nextjs-zeta.vercel.app/",
-    github: "https://github.com/AtharvShelke/ai-fitness-app", // Add your actual GitHub URL
+    github: undefined, // Add your actual GitHub URL
     date: "2024",
   },
   {
@@ -108,7 +119,7 @@ export const projectsData = [
     tags: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "JavaScript"],
     imageUrl: enrich,
     link: "https://www.enrichfurniture.com",
-    github: "https://github.com/AtharvShelke/enrich-kitchen", // Add your actual GitHub URL
+    github: undefined, // Add your actual GitHub URL
     date: "2024",
   },
   {
@@ -118,7 +129,7 @@ export const projectsData = [
     tags: ["React", "JavaScript", "CSS", "TMDb API", "Appwrite"],
     imageUrl: movieSeach,
     link: "https://movie-search-app-vert-five.vercel.app/",
-    github: "https://github.com/AtharvShelke/movie-search-app", // Add your actual GitHub URL
+    github: undefined, // Add your actual GitHub URL
     date: "2024",
   },
   {
@@ -128,7 +139,7 @@ export const projectsData = [
     tags: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "JavaScript"],
     imageUrl: restaura,
     link: "https://restaura-sigma.vercel.app/",
-    github: "https://github.com/AtharvShelke/restaura", // Add your actual GitHub URL
+    github: undefined, // Add your actual GitHub URL
     date: "2024",
   },
   {
@@ -138,7 +149,7 @@ export const projectsData = [
     tags: ["Next.js", "MongoDB", "Prisma", "Tailwind CSS", "JavaScript"],
     imageUrl: jobPortalImg,
     link: undefined, 
-    github: "https://github.com/AtharvShelke/placement-portal", // Add your actual GitHub URL
+    github: undefined, // Add your actual GitHub URL
     date: "2024",
   },
   {
@@ -148,7 +159,7 @@ export const projectsData = [
     tags: ["Next.js", "MongoDB", "Prisma", "Tailwind CSS", "TypeScript"],
     imageUrl: caseCobraImg,
     link: "https://casecobra-atharv.vercel.app/",
-    github: "https://github.com/AtharvShelke/casecobra", // Add your actual GitHub URL
+    github: undefined, // Add your actual GitHub URL
     date: "2024",
   },
   {
@@ -158,7 +169,7 @@ export const projectsData = [
     tags: ["Next.js", "Prisma", "MongoDB", "Tailwind CSS", "JavaScript"],
     imageUrl: inventoryManagementImg,
     link: undefined, 
-    github: "https://github.com/AtharvShelke/inventory-management", // Add your actual GitHub URL
+    github: undefined,
     date: "2024",
   }
 ] as const;

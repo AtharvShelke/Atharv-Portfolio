@@ -44,7 +44,7 @@ const Skills = () => {
 
   return (
     <section ref={ref} id="skills" className="mb-28 max-w-6xl mx-auto scroll-mt-28 px-4">
-      <SectionHeading>Technical Skills</SectionHeading>
+      <h2 className="text-3xl font-medium capitalize mb-8 text-center">Technical Skills</h2>
       
       <motion.p 
         className="text-center text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto"

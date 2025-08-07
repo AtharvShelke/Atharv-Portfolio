@@ -44,10 +44,10 @@ export default function Project({
           <Image
             src={imageUrl}
             alt={`Preview of ${title}`}
-            quality={95}
-            width={600} 
-            height={300} 
-            className="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-700" 
+            quality={100}
+            width={800} 
+            height={573} 
+            className="w-full h-60 md:h-80 object-cover group-hover:scale-105 transition-transform duration-700" 
           />
           
           {/* Overlay with Actions */}
