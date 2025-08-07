@@ -1,6 +1,6 @@
 'use client';
 import { experiencesData } from "@/lib/data";
-import SectionHeading from "./SectionHeading"
+import { Easing } from "framer-motion";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import 'react-vertical-timeline-component/style.min.css'
 import React, { useState, useEffect } from "react";
@@ -59,7 +59,7 @@ const Experience = () => {
             y: 0,
             transition: {
                 duration: 0.6,
-                ease: "easeOut",
+                ease: "easeOut" as Easing,
             },
         },
     });

@@ -3,7 +3,7 @@
 import React from "react";
 import { projectsData } from "@/lib/data";
 import Project from "./Project";
-import SectionHeading from "./SectionHeading";
+import { Easing } from "framer-motion";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
@@ -27,7 +27,7 @@ export default function Projects() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        ease: "easeOut" as Easing,
       },
     },
   };

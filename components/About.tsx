@@ -1,5 +1,5 @@
 'use client';
-import SectionHeading from "./SectionHeading";
+
 import { motion } from 'framer-motion';
 import { useSectionInView } from "@/lib/hooks";
 import {  FaBrain, FaGamepad, FaRocket, FaHeart, FaLightbulb } from 'react-icons/fa';

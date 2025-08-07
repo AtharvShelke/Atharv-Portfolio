@@ -1,6 +1,6 @@
 'use client';
 
-import SectionHeading from "./SectionHeading"
+
 import { useSectionInView } from "@/lib/hooks"
 import { motion } from 'framer-motion';
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiPython, SiMongodb, SiGit, SiDocker, SiVercel } from 'react-icons/si';

@@ -2,7 +2,7 @@
 import { FaPaperPlane, FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt } from "react-icons/fa"
 import { BiLoaderAlt } from "react-icons/bi"
 import { HiCheckCircle, HiExclamationCircle } from "react-icons/hi"
-import SectionHeading from "./SectionHeading"
+
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from 'framer-motion';
 import { sendEmail } from "@/actions/sendEmail";
