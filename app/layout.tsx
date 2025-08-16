@@ -40,6 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <meta name="google-site-verification" content="Wb8u9PL36Lq0RYmd_wwujQN23jvLSNrHLhALdlX_5vg" />
+      <title>Atharv Shelke - Portfolio</title>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 antialiased text-slate-900 dark:text-slate-100 relative transition-colors duration-300`}
       >
