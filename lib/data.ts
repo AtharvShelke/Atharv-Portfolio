@@ -12,6 +12,7 @@ import enrich from "@/public/new_assets/enrich-project.png";
 import aiFitness from "@/public/new_assets/ai-fitness.png";
 import movieSeach from "@/public/new_assets/movie-search.png";
 import aiStoryGenerator from "@/public/new_assets/AI-STORY.png"
+import blogApp from "@/public/new_assets/blog-app.png"
 import { RiRobot2Line } from "react-icons/ri";
 
 export const links = [
@@ -171,6 +172,16 @@ export const projectsData = [
     link: undefined, 
     github: undefined,
     date: "2024",
+  },
+  {
+    title: "Blog App",
+    description:
+      "A modern blogging platform featuring rich text editing, user authentication, and seamless content management. Built with a focus on performance and user experience.",
+    tags: ["React.js", "Express.js", "MongoDB", "Tailwind CSS", "JavaScript"],
+    imageUrl: blogApp,
+    link: "https://blog-app-mern-frontend-lrsj.onrender.com/", 
+    github: "https://github.com/AtharvShelke/Blog-App-MERN",
+    date: "2021",
   }
 ] as const;
 
@@ -193,5 +204,6 @@ export const skillsData = [
   "PostgreSQL",
   "Python",
   "Django",
+  "FastApi",
   "Framer Motion",
 ] as const;
